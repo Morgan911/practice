@@ -1,7 +1,8 @@
 public class Main {
 
 	public static void main(String[] args) {
-		printMatrix(getMatrix(4));
+		// printMatrix(getMatrix(4));
+		printMatrix(sideDiagonalsSum(getMatrix(3)));
 	}
 
 	public static int[][] getMatrix(int n) {
@@ -38,6 +39,18 @@ public class Main {
 		return arr;
 	}
 
+	public static int[] sideDiagonalsSum(int[][] arr) {
+		int[] result = new int[2 * arr.length - 1];
+			for(int i = 0; i < arr.length; i++){
+				for(int j = 0; j < arr.length; j++){
+					result[i+j] += arr[i][j]; 
+					printMatrix(result);
+				}
+			}
+
+		return result;
+	}
+
 	public static void printMatrix(int[][] arr) {
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = 0; j < arr.length; j++) {
@@ -45,6 +58,14 @@ public class Main {
 			}
 			System.out.println();
 		}
+		System.out.println("------------------");
+	}
+
+	public static void printMatrix(int[] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + "\t");
+		}
+		System.out.println();
 		System.out.println("------------------");
 	}
 }
