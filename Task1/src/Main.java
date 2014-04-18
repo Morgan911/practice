@@ -1,8 +1,8 @@
 public class Main {
 
 	public static void main(String[] args) {
-		// printMatrix(getMatrix(4));
-		printMatrix(sideDiagonalsSum(getMatrix(3)));
+		//printMatrix(getMatrix(4));
+		printMatrix(sideDiagonalsSum(getMatrix(4)));
 	}
 
 	public static int[][] getMatrix(int n) {
@@ -47,7 +47,6 @@ public class Main {
 					printMatrix(result);
 				}
 			}
-
 		return result;
 	}
 
